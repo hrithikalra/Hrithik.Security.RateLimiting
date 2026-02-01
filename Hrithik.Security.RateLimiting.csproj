@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<!-- NuGet metadata -->
+		<PackageId>Hrithik.Security.RateLimiting</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Hrithik Kalra</Authors>
+		<Company>MainLibProj</Company>
+
+		<RepositoryUrl>https://github.com/hrithikalra/Hrithik.Security.RateLimiting</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/hrithikalra/Hrithik.Security.RateLimiting</PackageProjectUrl>
+
+		<Description>
+			Enterprise-grade API Rate Limiting for ASP.NET Core.
+			Supports API key–based throttling, per-endpoint limits,
+			sliding window algorithms, and pluggable storage providers.
+			Designed for banking and fintech APIs.
+		</Description>
+
+		<PackageTags>
+			security;rate-limiting;api-security;banking;fintech;aspnetcore
+		</PackageTags>
+
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+		<None Include="LICENSE.txt" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.9" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.2" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="10.0.2" />
+	</ItemGroup>
+
+</Project>
